@@ -81,31 +81,34 @@ function makeUniqueRandom() {
 	 });
 
 //mover imagenes
-
- var posicion;
- var posicion2;
+ var primeraImagen;
+ var posicionImagen;
+ var posicionImagen2;
  var movimientos = document.getElementById('movimientos-text');
  var mov = 0;
 
  	function iniciaMovimientos(){
 		$('.elemento').draggable({ 
+			containment: '.panel-tablero',
+			revert : true,
 			start: function(){
-				containment: 'parent';
-				posicion = $(this).position();
+				posicionImagen = $(this).attr("src");
 				clicks();
+				primeraImagen = $(this);
 			}
-	// 	drop: function(){
-	// 		$('.ui-draggable-dragging').position() = posicion2;
-	// 	}
-	// 	over: function(){
-	// 		posicion2 = $(this).position();
-	// 	}
+		});
+		$('.elemento').droppable({
+			drop: function(event, ui){
+				posicionImagen2 = $(this).attr("src");
+				$(this).attr("src",posicionImagen);
+				$(primeraImagen).attr("src", posicionImagen2);
+			}
 		});
 	}
+
 function clicks(){
 	mov = mov + 1;
 	movimientos.textContent = mov;
-	
 }
 
 // Mostrar score
