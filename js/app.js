@@ -1,3 +1,71 @@
+//Agregar imagenes
+function agregarLosDulces(){
+	var dulces = ["1.png","2.png","3.png","4.png","1.png","2.png","3.png"];
+
+	for (var i=0; i < dulces.length; i++) {
+		$('.col-1').append("<img>");
+		var agregarElemento = $('.agregar').children();
+		$(agregarElemento).addClass("elemento");
+		var agregarDulces = $('.elemento').last();
+		$(agregarDulces).addClass("dulcesImagen"+ i);
+	 	$('.dulcesImagen'+ i).attr('src', 'image/' +dulces[i]); 
+	}
+
+	for (var i=0; i < dulces.length; i++) {
+		$('.col-2').append("<img>");
+		var agregarElemento = $('.agregar').children();
+		$(agregarElemento).addClass("elemento");
+		var agregarDulces = $('.elemento').last();
+		$(agregarDulces).addClass("dulcesImagen"+ i);
+	 	$('.dulcesImagen'+ i).attr('src', 'image/' +dulces[i]); 
+	}
+
+	for (var i=0; i < dulces.length; i++) {
+		$('.col-3').append("<img>");
+		var agregarElemento = $('.agregar').children();
+		$(agregarElemento).addClass("elemento");
+		var agregarDulces = $('.elemento').last();
+		$(agregarDulces).addClass("dulcesImagen"+ i);
+	 	$('.dulcesImagen'+ i).attr('src', 'image/' +dulces[i]); 
+	}
+
+	for (var i=0; i < dulces.length; i++) {
+		$('.col-4').append("<img>");
+		var agregarElemento = $('.agregar').children();
+		$(agregarElemento).addClass("elemento");
+		var agregarDulces = $('.elemento').last();
+		$(agregarDulces).addClass("dulcesImagen"+ i);
+	 	$('.dulcesImagen'+ i).attr('src', 'image/' +dulces[i]); 
+	}
+
+	for (var i=0; i < dulces.length; i++) {
+		$('.col-5').append("<img>");
+		var agregarElemento = $('.agregar').children();
+		$(agregarElemento).addClass("elemento");
+		var agregarDulces = $('.elemento').last();
+		$(agregarDulces).addClass("dulcesImagen"+ i);
+	 	$('.dulcesImagen'+ i).attr('src', 'image/' +dulces[i]); 
+	}
+
+	for (var i=0; i < dulces.length; i++) {
+		$('.col-6').append("<img>");
+		var agregarElemento = $('.agregar').children();
+		$(agregarElemento).addClass("elemento");
+		var agregarDulces = $('.elemento').last();
+		$(agregarDulces).addClass("dulcesImagen"+ i);
+	 	$('.dulcesImagen'+ i).attr('src', 'image/' +dulces[i]); 
+	}
+
+	for (var i=0; i < dulces.length; i++) {
+		$('.col-7').append("<img>");
+		var agregarElemento = $('.agregar').children();
+		$(agregarElemento).addClass("elemento");
+		var agregarDulces = $('.elemento').last();
+		$(agregarDulces).addClass("dulcesImagen"+ i);
+	 	$('.dulcesImagen'+ i).attr('src', 'image/' +dulces[i]); 
+	}
+}
+
 // Parpadeo de titulo
 
 	var cambiarColor;
@@ -63,6 +131,7 @@ function makeUniqueRandom() {
 		if (a == 1){
 			$("button").text("Parar");
 		 	inicio();
+		 	agregarLosDulces();
 		 	ordenarBloques();
 		 	parpadeo();
 		 	iniciaMovimientos();
